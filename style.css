@@ -1,0 +1,176 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    font:14px/1.3 'Open Sans', sans-serif;
+    color: #5e5b64;
+    background-color: #e3e2dd;
+    
+}
+span.actor:after{
+content: ",";
+}
+span.actor:last-child:after{
+    content: "";
+}
+
+a, a:visited {
+    outline:none;
+    
+}
+
+a:hover{
+    text-decoration:none;
+}
+
+section, footer, header, aside, nav{
+    display: block;
+}
+
+/*-------------------------
+    The menu
+--------------------------*/
+
+nav{
+    display:inline-block;
+    margin:0px auto 20px;
+    box-shadow:0 1px 1px #ccc;
+    border-radius:2px;
+    width: 100%;
+    text-align: left;
+}
+
+nav a{
+    display:inline-block;
+    padding: 18px 30px;
+    color:#fff !important;
+    font-weight:bold;
+    font-size:14px;
+    text-decoration:none !important;
+    line-height:1;
+    text-transform: uppercase;
+    background-color:transparent;
+
+    -webkit-transition:background-color 0.25s;
+    -moz-transition:background-color 0.25s;
+    transition:background-color 0.25s;
+}
+.read-more{
+    font-size: 12px;
+}
+
+nav a:first-child{
+    border-radius:2px 0 0 2px;
+}
+
+nav a:last-child{
+    border-radius:0 2px 2px 0;
+}
+
+nav .active
+{
+    background-color:goldenrod;
+}
+
+#main{
+    text-align: left;
+}
+
+ul  {
+    list-style-type: none;
+}
+.w-10{
+    width: 10%;
+}
+.raiting svg {
+    color: gold;
+    vertical-align: text-top;
+    margin-right: 3px;
+}
+.w-60{
+    width: 69%;
+}
+
+/*-------------------------
+    Grid layout
+--------------------------*/
+
+ul.grid{
+    display: flex;
+    flex-wrap: wrap;
+    order: 3;
+    flex-direction: row;
+}
+
+ul.grid li{
+    
+width: 33.3%;
+}
+
+ul.grid li img{
+    width:120px;
+    height:120px;   
+    border:none;
+}
+
+/*-------------------------
+    The search input
+--------------------------*/
+
+.bar{
+    box-shadow: 0 1px 1px #ccc;
+    border-radius: 2px;
+    padding: 5px;
+    position:relative;
+    text-align:right;
+    line-height: 1;
+}
+
+.bar a{
+    background:grey center center no-repeat;
+    width:32px;
+    height:32px;
+    display:inline-block;
+    text-decoration:none !important;
+    margin-right:5px;
+    border-radius:2px;
+    cursor:pointer;
+}
+
+.bar a.active{
+    background-color:gold;
+}
+
+.bar a.list-icon{
+
+    background-image:url("data:image/svg+xml,<svg viewBox='0 0 16 16' class='bi bi-list-task' fill='white' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5H2zM3 3H2v1h1V3z'/><path d='M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9z'/><path fill-rule='evenodd' d='M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5V7zM2 7h1v1H2V7zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5H2zm1 .5H2v1h1v-1z'/></svg>") ;
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem
+}
+
+.bar a.grid-icon{
+    background-image: url("data:image/svg+xml,<svg viewBox='0 0 16 16' class='bi bi-grid-3x3-gap' fill='white' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M4 2H2v2h2V2zm1 12v-2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V7a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm5 10v-2a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V7a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V2a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zM9 2H7v2h2V2zm5 0h-2v2h2V2zM4 7H2v2h2V7zm5 0H7v2h2V7zm5 0h-2v2h2V7zM4 12H2v2h2v-2zm5 0H7v2h2v-2zm5 0h-2v2h2v-2zM12 1a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zm-1 6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zm1 4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1h-2z'/></svg>");
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem
+}
+
+.bar input{
+    background:#fff no-repeat 13px 13px;
+
+    border: none;
+    width: 100%;
+    line-height: 19px;
+    padding: 11px 0;
+
+    border-radius: 2px;
+    box-shadow: 0 2px 8px #c4c4c4 inset;
+    text-align: left;
+    font-size: 14px;
+    font-family: inherit;
+    color: #738289;
+    font-weight: bold;
+    outline: none;
+    text-indent: 40px;
+}
