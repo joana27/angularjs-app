@@ -1,25 +1,36 @@
 <!doctype html>
 <html lang="en" ng-app="my-app">
-    <meta charset="utf-8">
-    <title>AngularJS app</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.2/angular-route.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular-resource.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <script src="app.js"></script>
-    <script src="movie.service.js"></script>
-    <script src="MoviesController.js"></script>
-    <script src="MovieDetailController.js"></script>
-    <script src="SignInController.js"></script>
-    <script src="NavigationController.js"></script>
-    <link rel="stylesheet" href="style.css"></link>
+<meta charset="utf-8">
+<title>AngularJS app</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.2/angular-route.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular-resource.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<script src="app.module.js"></script>
+<script src="core/core.module.js"></script>
+<script src="core/duration/duration.filter.js"></script>
+<script src="core/search/search.filter.js"></script>
+<script src="core/movie/movie.module.js"></script>
+<script src="core/movie/movie.service.js"></script>
+<script src="movie-list/movie-list.module.js"></script>
+<script src="movie-list/movie-list.js"></script>
+<script src="movie-detail/movie-detail.module.js"></script>
+<script src="movie-detail/movie-detail.js"></script>
+<script src="signin/signin.module.js"></script>
+<script src="signin/signin.js"></script>
+<script src="navigation/navigation.js"></script>
+<link rel="stylesheet" href="style.css">
+</link>
 </head>
+
 <body>
-    <div class="navigation" ng-controller="NavigationController">        
-    <nav class="bg-dark">
-        <a href="#!movies" ng-class="getClass('/movies')">Movies</a>
-        <a href="#!signin" ng-class="getClass('/signin')">Sign In</a>        
-    </nav>
+    <div class="navigation" ng-controller="NavigationController">
+        <nav class="bg-dark">
+            <a href="#!movies" ng-class="getClass('/movies')">Movies</a>
+            <a href="#!signin" ng-class="getClass('/signin')">Sign In</a>
+        </nav>
     </div>
     <div class="container">
         <div ng-view></div>

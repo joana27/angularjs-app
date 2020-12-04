@@ -1,25 +1,26 @@
-<div ng-controller="MoviesController">
   <div class="row">
     <div class="col-md-2">
       <div class="search-bar">
+        {{$strl.orderProp}}
         <input type="text" ng-model="searchString" class="form-control" placeholder="Search.." />
     </div> 
     <div class="sort mt-2">
       <label>Sort by:</label>
-      <select ng-model="orderProp" class="form-control" >
+      <select ng-model="$ctrl.orderProp" class="form-control" >
         <option value="title">Alphabetical</option>
         <option value="-imdbRating">Rating</option>
       </select>
     </div> 
     </div>
+    
     <div class="col-md-10">
       <div class="bar bg-dark">
-        <a class="list-icon" ng-class="{active: layout == 'list'}" ng-click="layout = 'list'"></a>
-        <a class="grid-icon" ng-class="{active: layout == 'grid'}" ng-click="layout = 'grid'"></a>
+        <a class="list-icon" ng-class="{active: $ctrl.layout == 'list'}" ng-click="$ctrl.layout = 'list'"></a>
+        <a class="grid-icon" ng-class="{active: $ctrl.layout == 'grid'}" ng-click="$ctrl.layout = 'grid'"></a>
     </div>
 
-      <ul class="list-unstyled list" ng-show="layout == 'list'">
-        <li ng-repeat="movie in movies | search:searchString | orderBy:orderProp" class="list-group-item media d-flex">
+      <ul class="list-unstyled list" ng-show="$ctrl.layout == 'list'">
+        <li ng-repeat="movie in $ctrl.movies | search:searchString | orderBy:$ctrl.orderProp" class="list-group-item media d-flex">
           <img src={{movie.posterurl}} alt="{{movie.title}}"  class="mr-3 rounded w-10 mb-2" />
           <div class="media-body ">
             <a href="#!/movies/{{movie.id}}" class="text-secondary d-block ">
@@ -32,8 +33,8 @@
           </div>
         </li>
       </ul>
-      <ul class="list-unstyled grid" ng-show="layout == 'grid'">
-        <li ng-repeat="movie in movies | search:searchString | orderBy:orderProp" class="list-group-item media d-flex">
+      <ul class="list-unstyled grid" ng-show="$ctrl.layout == 'grid'">
+        <li ng-repeat="movie in $ctrl.movies | search:searchString | orderBy:$ctrl.orderProp" class="list-group-item media d-flex">
           <img src={{movie.posterurl}} alt="{{movie.title}}"  class="mr-3 rounded w-10 mb-2" />
           <div class="media-body ">            
               <h7 class="mt-0 mb-1 d-inline-block font-weight-bold">
@@ -48,4 +49,3 @@
       </ul>
     </div>
   </div>
-</div>
