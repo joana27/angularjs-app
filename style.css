@@ -36,46 +36,42 @@ section, footer, header, aside, nav{
 nav{
     display:inline-block;
     margin:0px auto 20px;
-    box-shadow:0 1px 1px #ccc;
-    border-radius:2px;
     width: 100%;
     text-align: left;
 }
 
 nav a{
     display:inline-block;
-    padding: 18px 30px;
     color:#fff !important;
     font-weight:bold;
-    font-size:14px;
+    font-size:16px;
     text-decoration:none !important;
-    line-height:1;
-    text-transform: uppercase;
-    background-color:transparent;
-
-    -webkit-transition:background-color 0.25s;
-    -moz-transition:background-color 0.25s;
-    transition:background-color 0.25s;
 }
 .read-more{
     font-size: 12px;
 }
 
-nav a:first-child{
-    border-radius:2px 0 0 2px;
-}
 
-nav a:last-child{
-    border-radius:0 2px 2px 0;
-}
 
 nav .active
 {
-    background-color:goldenrod;
+    background-color:gold;
 }
 
 #main{
     text-align: left;
+}
+.search-bar.movies .bi-search{
+    top:-26px;
+    right: 10px;
+}
+.navbar-collapse{
+    height: 50px;
+}
+
+.bi-search{
+    position: relative; 
+    right: 26px;
 }
 
 ul  {
@@ -91,6 +87,9 @@ ul  {
 }
 .w-60{
     width: 69%;
+}
+.text-warning{
+    color: gold!important;
 }
 
 /*-------------------------
@@ -156,21 +155,4 @@ ul.grid li img{
     background-size: 1rem 1rem
 }
 
-.bar input{
-    background:#fff no-repeat 13px 13px;
 
-    border: none;
-    width: 100%;
-    line-height: 19px;
-    padding: 11px 0;
-
-    border-radius: 2px;
-    box-shadow: 0 2px 8px #c4c4c4 inset;
-    text-align: left;
-    font-size: 14px;
-    font-family: inherit;
-    color: #738289;
-    font-weight: bold;
-    outline: none;
-    text-indent: 40px;
-}

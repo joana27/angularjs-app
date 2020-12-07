@@ -1,7 +1,7 @@
 [
     {
         "id": "1",
-        "title": "Black Panther",
+        "name": "Black Panther",
         "year": "2018",
         "genres": [
             "Action",
@@ -57,7 +57,7 @@
     },
     {
         "id": "2",
-        "title": "Grottmannen Dug",
+        "name": "Grottmannen Dug",
         "year": "2018",
         "genres": [
             "Animation",
@@ -113,7 +113,7 @@
     },
     {
         "id": "4",
-        "title": "Samson",
+        "name": "Samson",
         "year": "2018",
         "genres": [
             "Action",
@@ -168,7 +168,7 @@
     },
     {
         "id": "5",
-        "title": "Loveless",
+        "name": "Loveless",
         "year": "2017",
         "genres": [
             "Drama"
@@ -222,7 +222,7 @@
     },
     {
         "id": "6",
-        "title": "L'amant double",
+        "name": "L'amant double",
         "year": "2017",
         "genres": [
             "Drama",
@@ -278,7 +278,7 @@
     },
     {
         "id": "7",
-        "title": "The Party",
+        "name": "The Party",
         "year": "2017",
         "genres": [
             "Comedy",
@@ -333,7 +333,7 @@
     },
     {
         "id": "8",
-        "title": "The Boy Downstairs",
+        "name": "The Boy Downstairs",
         "year": "2017",
         "genres": [
             "Comedy",
@@ -389,7 +389,7 @@
     },
     {
         "id": "9",
-        "title": "Nostalgia",
+        "name": "Nostalgia",
         "year": "2018",
         "genres": [
             "Drama"
@@ -443,7 +443,7 @@
     },
     {
         "id": "10",
-        "title": "Oh Lucy!",
+        "name": "Oh Lucy!",
         "year": "2017",
         "genres": [
             "Comedy",
@@ -498,7 +498,7 @@
     },
     {
         "id": "11",
-        "title": "Tehran Taboo",
+        "name": "Tehran Taboo",
         "year": "2017",
         "genres": [
             "Animation",
@@ -553,7 +553,7 @@
     },
     {
         "id": "13",
-        "title": "Mind Game",
+        "name": "Mind Game",
         "year": "2004",
         "genres": [
             "Animation",
@@ -609,7 +609,7 @@
     },
     {
         "id": "14",
-        "title": "Western",
+        "name": "Western",
         "year": "2017",
         "genres": [
             "Drama"
@@ -663,7 +663,7 @@
     },
     {
         "id": "15",
-        "title": "Fifty Shades Freed",
+        "name": "Fifty Shades Freed",
         "year": "2018",
         "genres": [
             "Drama",
@@ -719,7 +719,7 @@
     },
     {
         "id": "16",
-        "title": "Pelle Kanin",
+        "name": "Pelle Kanin",
         "year": "2018",
         "genres": [
             "Animation",
@@ -775,7 +775,7 @@
     },
     {
         "id": "17",
-        "title": "The 15:17 to Paris",
+        "name": "The 15:17 to Paris",
         "year": "2018",
         "genres": [
             "Drama",
@@ -831,7 +831,7 @@
     },
     {
         "id": "18",
-        "title": "Jumanji: Welcome to the Jungle",
+        "name": "Jumanji: Welcome to the Jungle",
         "year": "2017",
         "genres": [
             "Action",
@@ -887,7 +887,7 @@
     },
     {
         "id": "19",
-        "title": "The Greatest Showman",
+        "name": "The Greatest Showman",
         "year": "2017",
         "genres": [
             "Biography",
@@ -943,7 +943,7 @@
     },
     {
         "id": "20",
-        "title": "Maze Runner: The Death Cure",
+        "name": "Maze Runner: The Death Cure",
         "year": "2018",
         "genres": [
             "Action",
@@ -999,7 +999,7 @@
     },
     {
         "id": "21",
-        "title": "Winchester - House of Ghosts",
+        "name": "Winchester - House of Ghosts",
         "year": "2018",
         "genres": [
             "Biography",
@@ -1055,7 +1055,7 @@
     },
     {
         "id": "22",
-        "title": "The Post",
+        "name": "The Post",
         "year": "2017",
         "genres": [
             "Biography",
@@ -1111,7 +1111,7 @@
     },
     {
         "id": "23",
-        "title": "Hostiles",
+        "name": "Hostiles",
         "year": "2017",
         "genres": [
             "Adventure",
@@ -1167,7 +1167,7 @@
     },
     {
         "id": "24",
-        "title": "The Shape of Water",
+        "name": "The Shape of Water",
         "year": "2017",
         "genres": [
             "Adventure",

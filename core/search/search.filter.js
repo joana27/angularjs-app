@@ -11,7 +11,7 @@ angular.module("core").filter('search', function () {
 
             angular.forEach(arr, function (item) {
 
-                if (item.title.toLowerCase().indexOf(searchString) !== -1) {
+                if (item.name.toLowerCase().indexOf(searchString) !== -1) {
                     result.push(item);
                 }
 

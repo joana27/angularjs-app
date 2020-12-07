@@ -8,4 +8,13 @@ module.factory('movieService',['$resource',function($resource){
                 }
             });
           }
-        ]);
+]);
+module.factory('tvshowsService',['$resource',function($resource){
+  return $resource('tvShows/tvShows.json',{},{
+    query: {
+        method: 'GET' ,
+        isArray: true         
+    }
+});
+}
+])
