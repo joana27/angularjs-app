@@ -1,7 +1,7 @@
 angular.module("shows")
 .component("shows",{
     templateUrl:'shows/shows.html',
-    controller: ShowsController
+    controller: ('ShowsController',ShowsController)
 
 });
 function ShowsController(tvshowsService){    

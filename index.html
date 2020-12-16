@@ -7,39 +7,57 @@
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular-resource.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 <script src="app.module.js"></script>
-<script src="core/core.module.js"></script>
-<script src="core/duration/duration.filter.js"></script>
-<script src="core/search/search.filter.js"></script>
-<script src="core/to-trusted/toTrusted.filter.js"></script>
-<script src="core/movie/movie.module.js"></script>
-<script src="core/movie/movie.service.js"></script>
+<script src="app.config.js"></script>
+<script src="shared/shared.module.js"></script>
+<script src="shared/filters/duration.filter.js"></script>
+<script src="shared/filters/search.filter.js"></script>
+<script src="shared/filters/toTrusted.filter.js"></script>
+<script src="shared/services/auth.service.js"></script>
+<script src="shared/services/movie.service.js"></script>
+
 <script src="movie-list/movie-list.module.js"></script>
-<script src="movie-list/movie-list.js"></script>
+<script src="movie-list/movie-list.component.js"></script>
 <script src="movie-detail/movie-detail.module.js"></script>
-<script src="movie-detail/movie-detail.js"></script>
+<script src="movie-detail/movie-detail.component.js"></script>
 <script src="shows/shows.module.js"></script>
-<script src="shows/shows.js"></script>
-<script src="navigation/navigation.js"></script>
-<link rel="stylesheet" href="style.css">
-</link>
+<script src="shows/shows.component.js"></script>
+<script src="shows/shows.service.js"></script>
+<script src="login/login.module.js"></script>
+<script src="login/login.component.js"></script>
+<script src="signup/signup.module.js"></script>
+<script src="signup/signup.component.js"></script>
+<script src="navigation/navigation.component.js"></script>
+<link rel="stylesheet" href="app.css"></link>
 </head>
 
 <body>   
-        <nav class="navbar navbar-dark bg-dark navbar-expand-lg py-0" ng-controller="NavigationController">
-            <a href=#!movies class="navbar-brand mb-0 h1 text-warning" title="Movie Database">MDB</a>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item mr-2"> <a href="#!movies" ng-class="getClass('/movies')" class="nav-link">Movies</a>
-                    </li>
-                    <li class="nav-item"> <a href="#!shows" ng-class="getClass('/shows')" class="nav-link">TV Shows</a>
-                    </li>
-                </ul>
-            </div>
-         </nav>
-  
+    <navigation></navigation>  
     <div class="container">
         <div ng-view></div>
-
     </div>
+
+<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase.js"></script>
+<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyAVHpn48owTuSKlQNxmQVC3f26xzLjSLZA",
+    authDomain: "movieapp-d3a8a.firebaseapp.com",
+    databaseURL: "https://movieapp-d3a8a-default-rtdb.firebaseio.com",
+    projectId: "movieapp-d3a8a",
+    storageBucket: "movieapp-d3a8a.appspot.com",
+    messagingSenderId: "727629967547",
+    appId: "1:727629967547:web:58bd89f4fa96b11706799e",
+    measurementId: "G-SJ3YV0JE79"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 </body>

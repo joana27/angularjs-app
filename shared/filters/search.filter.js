@@ -1,4 +1,4 @@
-angular.module("core").filter('search', function () {
+angular.module("shared").filter('search', function () {
         return function (arr, searchString) {
 
             if (!searchString) {

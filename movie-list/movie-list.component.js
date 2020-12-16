@@ -2,7 +2,7 @@
  angular.module("movieList")
  .component('movieList',{
      templateUrl:'movie-list/movie-list.html',
-     controller: MovieListController
+     controller: ('MovieListController',MovieListController)
  });
  function MovieListController(movieService) {
     this.movies = movieService.query();

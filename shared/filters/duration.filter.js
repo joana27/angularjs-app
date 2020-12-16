@@ -1,7 +1,7 @@
 'use strict';
 
 angular.
-    module('core').
+    module('shared').
     filter('duration', function () {
         return function (input) {
 

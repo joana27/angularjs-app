@@ -1,0 +1,28 @@
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg py-0" ng-click="$event.preventDefault()">
+    <a href=#!movies class="navbar-brand mb-0 h1 text-warning" title="Movie Database">MDB</a>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item mr-2"> <a href="#!movies" ng-class="getClass('/movies')" class="nav-link">Movies</a>
+            </li>
+            <li class="nav-item"> <a href="#!shows" ng-class="getClass('/shows')" class="nav-link">TV Shows</a>
+            </li>
+        </ul>
+       <span class="text-white">{{firebaseUser.email}}</span> 
+
+        <div ng-show="firebaseUser" class="dropdown navbar-text text-white account">
+            <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-person-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                </svg>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a href="#" ng-click="logOut()" class="dropdown-item text-dark">Log Out</a>
+            </div>
+        </div>
+
+        
+    </div>
+</nav>

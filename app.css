@@ -154,5 +154,43 @@ ul.grid li img{
     background-repeat: no-repeat;
     background-size: 1rem 1rem
 }
+/*-------------------------
+    The sign in form
+--------------------------*/
 
-
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+  }
+  .form-signin .checkbox {
+    font-weight: 400;
+  }
+  .form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .form-signin .form-control:focus {
+    z-index: 2;
+  }
+   
+.validation{
+    width: 100%;
+    margin-top: .25rem;
+    font-size: .875em;
+    color: #dc3545;
+}
+form.ng-submitted .form-control.ng-invalid{
+    border-color: #dc3545;
+}
+.dropdown.account .dropdown-menu{
+    left: auto;
+    right: 0;
+}
+.dropdown.account .dropdown-menu a{
+    font-size: 14px;
+}
