@@ -18,12 +18,7 @@ angular.module('my-app')
                     }]
                 }
             }).when('/signup',{
-                template:'<signup></signup>',
-               /* resolve: {
-                    "currentAuth": ["Auth", function(Auth) {
-                        return Auth.$requireSignIn();
-                    }]
-                }*/
+                template:'<signup></signup>',               
             }).when('/movies',{
                 template:'<movie-list></movie-list.html>'  ,
                 resolve: {
@@ -39,7 +34,7 @@ angular.module('my-app')
                     }]
                 }             
               }).when('/shows',{
-                template:'<shows></shows>'  ,
+                template:'<shows></shows>',
                 resolve: {
                     "currentAuth": ["Auth", function(Auth) {
                         return Auth.$requireSignIn();

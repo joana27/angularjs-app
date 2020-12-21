@@ -6,7 +6,7 @@ angular.module('my-app',[
     'movieDetail',
     'shows',
     'login',
-    'signup'
+    'signup',
 ]);
 
 

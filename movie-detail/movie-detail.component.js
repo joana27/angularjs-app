@@ -5,7 +5,6 @@ angular.module('movieDetail')
 });
 
 function MovieDetailController($scope,$routeParams,movieService){  
-    console.log('test')    
     movieService.query().$promise.
     then(function(response){       
         $scope.movie = response.find(movie =>movie.id === $routeParams.movieId);
