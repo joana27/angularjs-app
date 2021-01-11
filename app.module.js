@@ -7,6 +7,7 @@ angular.module('my-app',[
     'shows',
     'login',
     'signup',
+    'oc.lazyLoad'
 ]);
 
 

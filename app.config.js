@@ -1,46 +1,23 @@
-angular.module('my-app')
-.run(["$rootScope", "$location", function($rootScope, $location) {
-    $rootScope.$on("$routeChangeError", function(event, next, previous, error) {   
-      if (error === "AUTH_REQUIRED") {
-        $location.path("/login");
-      }
-    });
-  }]);
+angular.module('my-app').config([ "$ocLazyLoadProvider", function($ocLazyLoadProvider) {
+    $ocLazyLoadProvider.config({
+        'debug': true, // For debugging 'true/false'
+        'events': true, // For Event 'true/false'
+        'modules': [{ 
+            name : 'login', 
+            files: ['login/login.module.js']
+        },{
+            name : 'signup', 
+            files: ['signup/signup.module.js']
+        },{
+            name : 'movies', 
+            files: ['movie-list/movie-list.module.js']
+        },{
+            name : 'movie-detail', 
+            files: ['movie-detail/movie-detail.module.js']
+        },{
+            name:'shows',
+            files:['shows/shows.module.js']
 
-angular.module('my-app')
-.config(['$routeProvider',function ($routeProvider){
-    $routeProvider      
-            .when('/login',{
-                template:'<login></login>',
-                resolve: {
-                    "currentAuth": ["Auth", function(Auth) {
-                        return Auth.$waitForSignIn();
-                    }]
-                }
-            }).when('/signup',{
-                template:'<signup></signup>',               
-            }).when('/movies',{
-                template:'<movie-list></movie-list.html>'  ,
-                resolve: {
-                    "currentAuth": ["Auth", function(Auth) {
-                        return Auth.$requireSignIn();
-                    }]
-                }        
-            }).when('/movies/:movieId', {
-                template: '<movie-detail></movie-detail.html>' ,
-                resolve: {
-                    "currentAuth": ["Auth", function(Auth) {
-                        return Auth.$requireSignIn();
-                    }]
-                }             
-              }).when('/shows',{
-                template:'<shows></shows>',
-                resolve: {
-                    "currentAuth": ["Auth", function(Auth) {
-                        return Auth.$requireSignIn();
-                    }]
-                }            
-            }).otherwise('/movies')
-  
-    
+        }]
+    });
 }]);
